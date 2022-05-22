@@ -1,43 +1,48 @@
-<h2>Kategorien</h2>
-<ul class="categories">
-    <li *ngFor="let category of saturn.categories">
-        <!-- <button type="button" (click)="onSelect(item)"> -->
-            <span class="badge">{{category.name}}</span>
-            <!-- <span class="name">{{category.name}}</span> -->
-        <!-- </button> -->
-    </li>
-</ul>
+<!-- <h2>Kategorien</h2> -->
+<!-- <ul class="categories"> -->
+    <!-- <li *ngFor="let category of mmsaturn.categories"> -->
+            <!-- <span class="badge">{{category.name}}</span> -->
+    <!-- </li> -->
+<!-- </ul> -->
 
-<h2>Marken</h2>
-<ul class="brands">
-    <li *ngFor="let brand of saturn.brands">
-        <!-- <button type="button" (click)="onSelect(item)"> -->
-            <span class="badge">{{brand.name}}</span>
-            <!-- <span class="name">{{category.name}}</span> -->
-        <!-- </button> -->
-    </li>
-</ul>
+<!-- <h2>Marken</h2> -->
+<!-- <ul class="brands"> -->
+    <!-- <li *ngFor="let brand of mmsaturn.brands"> -->
+            <!-- <span class="badge">{{brand.name}}</span> -->
+        <!-- </li> -->
+<!-- </ul> -->
 
-<h2>Verkäufer</h2>
-<ul class="outlets">
-    <li *ngFor="let outlet of saturn.outlets">
-        <!-- <button type="button" (click)="onSelect(item)"> -->
-            <span class="badge">{{outlet.name}}</span>
-            <!-- <span class="name">{{category.name}}</span> -->
-        <!-- </button> -->
-    </li>
-</ul>
+<!-- <h2>Verkäufer</h2> -->
+<!-- <ul class="outlets"> -->
+    <!-- <li *ngFor="let outlet of mmsaturn.outlets"> -->
+            <!-- <span class="badge">{{outlet.name}}</span> -->
+        <!-- </li> -->
+<!-- </ul> -->
+
+<!-- posting_id: string; -->
+<!-- posting_text: string; -->
+<!-- price: string; -->
+<!-- price_old: string; -->
+<!-- shipping_cost: number; -->
+<!-- shipping_type: string; -->
+<!-- discount_in_percent: number; -->
+<!-- name: string; -->
+<!-- brand: Brand2; -->
+<!-- eek: Eek; -->
+<!-- top_level_catalog_id: string; -->
+<!-- original_url: string[]; -->
+<!-- outlet: Outlet2; -->
+<!-- pim_id: number; -->
 
 <h2>Anzeigen</h2>
 <ul class="outlets">
-    <li *ngFor="let posting of saturn.postings">
-        <!-- <button type="button" (click)="onSelect(item)"> -->
-            <span class="badge">{{posting.name}}</span>
-            <!-- <span class="name">{{category.name}}</span> -->
-        <!-- </button> -->
+    <li *ngFor="let posting of mmsaturn.postings">
+            <span class="name">{{posting.name}}</span><br>
+            <span class="price_old">{{posting.price_old}}&euro;</span> &ndash; <span class="price">{{posting.price}}&euro;</span>&nbsp;<span class="discount">{{posting.discount_in_percent}}%</span><br>
+            <span class="tags">tags: {{posting.brand.name}} {{posting.outlet.name}}</span><p></p>
     </li>
 </ul>
 
-<h2>weitere daten vorhande: {{saturn.morePostingsAvailable }}</h2>
+<h2>weitere daten vorhande: {{mmsaturn.morePostingsAvailable }}</h2>
 
 <!-- <app-item-detail [item]="selectedItem"></app-item-detail> -->

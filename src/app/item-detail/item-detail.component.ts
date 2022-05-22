@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { saturn } from '../saturn';
+import { mmsaturn } from '../mmsaturn';
 
 @Component({
   selector: 'app-item-detail',
@@ -8,7 +8,7 @@ import { saturn } from '../saturn';
 })
 export class ItemDetailComponent implements OnInit {
 
-  @Input() item?: saturn.Category;
+  @Input() item?: mmsaturn.Category;
 
   constructor() { }
 

@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs/internal/Observable';
 import { of } from 'rxjs/internal/observable/of';
-import { saturn } from './saturn';
+import { mmsaturn } from './mmsaturn';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 
 @Injectable({
@@ -10,15 +10,24 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 export class ItemService {
 
   // https://www.saturn.de/de/data/fundgrube/api/postings?limit=100000&offset=0
-  private itemsUrl = '/api/postings?limit=100000&offset=0';  // URL to web api
+  private saturnItemsUrl = 'saturn/api/postings?limit=100000&offset=0';  // URL to web api
+
+  // https://www.mediamarkt.de/de/data/fundgrube/api/postings?limit=100000&offset=0
+  private mmItemsUrl = 'mediamarkt/api/postings?limit=100000&offset=0';  // URL to web api
 
   constructor(
     private http: HttpClient
   ) { }
 
-  getSaturnData(): Observable<saturn.RootObject> {
-  //   const items = of(ITEMS);
-  //   return items;
-  return this.http.get<saturn.RootObject>(this.itemsUrl)
+  getSaturnData(): Observable<mmsaturn.RootObject> {
+    //   const items = of(ITEMS);
+    //   return items;
+    return this.http.get<mmsaturn.RootObject>(this.saturnItemsUrl)
+  }
+
+  getMMData(): Observable<mmsaturn.RootObject> {
+    //   const items = of(ITEMS);
+    //   return items;
+    return this.http.get<mmsaturn.RootObject>(this.mmItemsUrl)
   }
 }

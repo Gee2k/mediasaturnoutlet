@@ -1,0 +1,16 @@
+span.name {
+    font-style: normal;
+    font-weight: 700;
+}
+
+span.price_old {
+    text-decoration-line: line-through;
+}
+
+span.price {
+    color: red;
+}
+
+span.discount {
+    color: lightseagreen;
+}

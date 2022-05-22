@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { saturn } from '../saturn';
+import { mmsaturn } from '../mmsaturn';
 import { ItemService } from '../item.service';
 
 @Component({
@@ -9,7 +9,7 @@ import { ItemService } from '../item.service';
 })
 export class ItemsComponent implements OnInit {
 
-  saturn!: saturn.RootObject;
+  mmsaturn!: mmsaturn.RootObject;
 
   constructor(private itemService: ItemService) { }
 
@@ -23,6 +23,6 @@ export class ItemsComponent implements OnInit {
 
   getItems(): void {
     this.itemService.getSaturnData()
-        .subscribe(saturn => this.saturn = saturn);
+        .subscribe(mmsaturn => this.mmsaturn = mmsaturn);
   }
 }

@@ -1,7 +1,18 @@
 {
-    "/api": {
+    "/saturn/api": {
         "target": "https://www.saturn.de/de/data/fundgrube",
         "secure": true,
-        "changeOrigin": true
+        "changeOrigin": true,
+        "pathRewrite": {
+            "^/saturn": ""
+          }
+    },
+    "/mediamarkt/api": {
+        "target": "https://www.mediamarkt.de/de/data/fundgrube",
+        "secure": true,
+        "changeOrigin": true,
+        "pathRewrite": {
+            "^/mediamarkt": ""
+          }
     }
 }

@@ -3,7 +3,7 @@
 //   name: string;
 // }
 
-declare module saturn {
+declare module mmsaturn {
 
   export interface Category {
       id: string;
@@ -85,4 +85,4 @@ declare module saturn {
 
 }
 
-export {saturn} 
+export {mmsaturn} 
