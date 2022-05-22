@@ -1,0 +1,7 @@
+{
+    "/api": {
+        "target": "https://www.saturn.de/de/data/fundgrube",
+        "secure": true,
+        "changeOrigin": true
+    }
+}

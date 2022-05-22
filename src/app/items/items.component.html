@@ -1,0 +1,43 @@
+<h2>Kategorien</h2>
+<ul class="categories">
+    <li *ngFor="let category of saturn.categories">
+        <!-- <button type="button" (click)="onSelect(item)"> -->
+            <span class="badge">{{category.name}}</span>
+            <!-- <span class="name">{{category.name}}</span> -->
+        <!-- </button> -->
+    </li>
+</ul>
+
+<h2>Marken</h2>
+<ul class="brands">
+    <li *ngFor="let brand of saturn.brands">
+        <!-- <button type="button" (click)="onSelect(item)"> -->
+            <span class="badge">{{brand.name}}</span>
+            <!-- <span class="name">{{category.name}}</span> -->
+        <!-- </button> -->
+    </li>
+</ul>
+
+<h2>Verkäufer</h2>
+<ul class="outlets">
+    <li *ngFor="let outlet of saturn.outlets">
+        <!-- <button type="button" (click)="onSelect(item)"> -->
+            <span class="badge">{{outlet.name}}</span>
+            <!-- <span class="name">{{category.name}}</span> -->
+        <!-- </button> -->
+    </li>
+</ul>
+
+<h2>Anzeigen</h2>
+<ul class="outlets">
+    <li *ngFor="let posting of saturn.postings">
+        <!-- <button type="button" (click)="onSelect(item)"> -->
+            <span class="badge">{{posting.name}}</span>
+            <!-- <span class="name">{{category.name}}</span> -->
+        <!-- </button> -->
+    </li>
+</ul>
+
+<h2>weitere daten vorhande: {{saturn.morePostingsAvailable }}</h2>
+
+<!-- <app-item-detail [item]="selectedItem"></app-item-detail> -->
